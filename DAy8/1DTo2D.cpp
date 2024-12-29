@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-     for(int i = 1; i<=100; i++){
-      cout<<i<<" HAPPY BIRTHDAY SHWETA"<<endl;
-     }
+     bitset<31> a;
+     a=-5;
+     cout<<a;
      return 0;
 }

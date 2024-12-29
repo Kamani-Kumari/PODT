@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
+     //1 6 7 4 9 2 3 8 5
+     //0 4 4 0 4 4 4 0 4 gcd of that
       int TotalTest;
       cin>>TotalTest;
       while(TotalTest--){
@@ -10,22 +12,11 @@ int main(){
       for(int i=0; i<n; i++){
           cin>>arr[i];
       }
-      int temp,res;
-      for(int i = 0; i<n; i++){
-          if(arr[i]==i+1){
-              continue;
-          }
-          else{
-              temp = arr[i];
-              break;
-          }
+      int res = 0;
+      for(int i =0; i<n; i++){
+           res = __gcd(res,abs(arr[i]-i-1));
       }
-      int i;
-      for( i =0; i<temp;i++);
-      res = abs(temp - arr[i-1]);
-      cout<<res<<endl
-      
-      ;
+      cout<<res<<endl;
       
       }
      return 0;
