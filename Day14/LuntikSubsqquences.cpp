@@ -11,27 +11,12 @@ int main()
     vector<int> nums(n);
     for (int i = 0; i < n; i++)
       cin >> nums[i];
-
-    sort(nums.begin(), nums.end());
-
-    int sum = 0;
-    for (int i = 0; i < n; i++)
-    {
-      sum = sum + nums[i];
-    }
-    int sumcheck = sum;
-    set<int> reduceNum;
-    for (int i = 0; i < n; i++)
-    {
-       sumcheck -= nums[i];
-       if(nums[i]==0 || sum-1 == sumcheck  )
-       {
-        reduceNum.insert(nums[i]);
-       }
-     
-       sumcheck = sum;
-    }
-     cout<<endl<<reduceNum.size();
+    long long int ones = count(nums.begin(), nums.end(), 1);
+   long long int result = 0;
+   long long zeros = 0;
+     zeros = count(nums.begin(), nums.end(), 0);
+      result = pow(2,zeros)*ones;
+      cout<<result<<endl;
   }
   return 0;
 }
