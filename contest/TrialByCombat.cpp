@@ -6,12 +6,12 @@ int main()
    cin>>t;
    while(t--)
    {
-      int n,k;
+     long long int n,k;
       cin>>n>>k;
       vector<int> nums(n);
       for(int i =0; i<n; i++)  cin>>nums[i];
 
-      int sum = 0,res=0;
+     long long int sum = 0,res=0;
       if(k<nums[0]){
           cout<<res<<endl;
       }
@@ -24,6 +24,7 @@ int main()
                 res++;
                 k = k+nums[i];
              }
+             else break;
          }
          cout<<res<<endl;
       }
